@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  iOSDISample
+
+  Created by YukiOkudera on 2018/10/21.
+  Copyright © 2018 YukiOkudera. All rights reserved.
+*/
+
+// MARK: - PostcodeSearchViewController(郵便番号検索画面)
+
+"success" = "成功";
+"failure" = "失敗";
+
+"postcode_search_error_empty" = "該当の住所が見つかりませんでした。";
+"postcode_search_error_searchFailed" = "住所の検索に失敗しました。";
+"postcode_search_error_unreachable" = "通信環境の良い場所で再度お試しください。";
+"postcode_search_error_serverError" = "サーバエラーが発生しました。";
+"postcode_search_error_others" = "システムエラーが発生しました。";
