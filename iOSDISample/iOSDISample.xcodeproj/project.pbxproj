@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B638261A2182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */; };
+		B638261C218381CD00E7A19A /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */; };
 		B6541B4A217C855400BDF4FF /* PostcodeRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */; };
 		B6541B4B217C872F00BDF4FF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5B962217C493600B1DAB3 /* Alamofire.framework */; };
 		B6541B4C217C872F00BDF4FF /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E5B961217C493600B1DAB3 /* PromiseKit.framework */; };
-		B6541B52217CA55200BDF4FF /* PostcodeSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B51217CA55200BDF4FF /* PostcodeSearchUITests.swift */; };
-		B6541B54217CA70300BDF4FF /* UIComponentIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B53217CA70300BDF4FF /* UIComponentIdentifiers.swift */; };
+		B6541B52217CA55200BDF4FF /* UserInfoInputViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B51217CA55200BDF4FF /* UserInfoInputViewControllerUITests.swift */; };
 		B6541B56217CAA0A00BDF4FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B55217CAA0A00BDF4FF /* Constants.swift */; };
 		B6541B58217CAAF900BDF4FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6541B57217CAAF900BDF4FF /* Localizable.strings */; };
 		B6541B5B217CAB7D00BDF4FF /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B5A217CAB7D00BDF4FF /* String+Localized.swift */; };
 		B693E653216E8032001BE87A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B693E652216E8032001BE87A /* AppDelegate.swift */; };
-		B693E655216E8032001BE87A /* PostcodeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B693E654216E8032001BE87A /* PostcodeSearchViewController.swift */; };
-		B693E658216E8032001BE87A /* PostcodeSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B693E656216E8032001BE87A /* PostcodeSearchViewController.storyboard */; };
+		B693E655216E8032001BE87A /* UserInfoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B693E654216E8032001BE87A /* UserInfoInputViewController.swift */; };
+		B693E658216E8032001BE87A /* UserInfoInputViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B693E656216E8032001BE87A /* UserInfoInputViewController.storyboard */; };
 		B693E65A216E8033001BE87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B693E659216E8033001BE87A /* Assets.xcassets */; };
 		B693E65D216E8033001BE87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B693E65B216E8033001BE87A /* LaunchScreen.storyboard */; };
 		B693E684216E85F6001BE87A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B693E683216E85F6001BE87A /* Injectable.swift */; };
@@ -28,6 +29,12 @@
 		B6E5B970217C636D00B1DAB3 /* PostcodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E5B96F217C636D00B1DAB3 /* PostcodeRequest.swift */; };
 		B6E5B973217C642500B1DAB3 /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E5B972217C642500B1DAB3 /* Error+Helper.swift */; };
 		B6E5B975217C64AA00B1DAB3 /* Postcodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E5B974217C64AA00B1DAB3 /* Postcodes.swift */; };
+		B6E764D4218568C600DF78DD /* UIView+RecursiveSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764D3218568C600DF78DD /* UIView+RecursiveSubviews.swift */; };
+		B6E764D621856A9300DF78DD /* UIScrollView+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764D521856A9300DF78DD /* UIScrollView+Touch.swift */; };
+		B6E764D821856BAB00DF78DD /* UIViewController+EndEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764D721856BAB00DF78DD /* UIViewController+EndEditing.swift */; };
+		B6E764DA21856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764D921856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift */; };
+		B6E764DC218585E800DF78DD /* KeyboardEventObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764DB218585E800DF78DD /* KeyboardEventObservable.swift */; };
+		B6E764DE2185934100DF78DD /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E764DD2185934100DF78DD /* UIViewController+ShowAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,16 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoInputViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
 		B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeRequestTests.swift; sourceTree = "<group>"; };
-		B6541B51217CA55200BDF4FF /* PostcodeSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeSearchUITests.swift; sourceTree = "<group>"; };
-		B6541B53217CA70300BDF4FF /* UIComponentIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentIdentifiers.swift; sourceTree = "<group>"; };
+		B6541B51217CA55200BDF4FF /* UserInfoInputViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInputViewControllerUITests.swift; sourceTree = "<group>"; };
 		B6541B55217CAA0A00BDF4FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B6541B57217CAAF900BDF4FF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B6541B5A217CAB7D00BDF4FF /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		B693E64F216E8031001BE87A /* iOSDISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B693E652216E8032001BE87A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B693E654216E8032001BE87A /* PostcodeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeSearchViewController.swift; sourceTree = "<group>"; };
-		B693E657216E8032001BE87A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PostcodeSearchViewController.storyboard; sourceTree = "<group>"; };
+		B693E654216E8032001BE87A /* UserInfoInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInputViewController.swift; sourceTree = "<group>"; };
+		B693E657216E8032001BE87A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserInfoInputViewController.storyboard; sourceTree = "<group>"; };
 		B693E659216E8033001BE87A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B693E65C216E8033001BE87A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B693E65E216E8033001BE87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +81,12 @@
 		B6E5B96F217C636D00B1DAB3 /* PostcodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeRequest.swift; sourceTree = "<group>"; };
 		B6E5B972217C642500B1DAB3 /* Error+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helper.swift"; sourceTree = "<group>"; };
 		B6E5B974217C64AA00B1DAB3 /* Postcodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postcodes.swift; sourceTree = "<group>"; };
+		B6E764D3218568C600DF78DD /* UIView+RecursiveSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RecursiveSubviews.swift"; sourceTree = "<group>"; };
+		B6E764D521856A9300DF78DD /* UIScrollView+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Touch.swift"; sourceTree = "<group>"; };
+		B6E764D721856BAB00DF78DD /* UIViewController+EndEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EndEditing.swift"; sourceTree = "<group>"; };
+		B6E764D921856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoInputViewController+UITextViewDelegate.swift"; sourceTree = "<group>"; };
+		B6E764DB218585E800DF78DD /* KeyboardEventObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEventObservable.swift; sourceTree = "<group>"; };
+		B6E764DD2185934100DF78DD /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6382615217F864200E7A19A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B6E764DB218585E800DF78DD /* KeyboardEventObservable.swift */,
+				B6E764D521856A9300DF78DD /* UIScrollView+Touch.swift */,
+				B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */,
+				B6E764D3218568C600DF78DD /* UIView+RecursiveSubviews.swift */,
+				B6E764D721856BAB00DF78DD /* UIViewController+EndEditing.swift */,
+				B6E764DD2185934100DF78DD /* UIViewController+ShowAlert.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B63826182182382000E7A19A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */,
+				B6E764D921856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B6541B47217C853800BDF4FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,18 +159,19 @@
 		B6541B4D217CA24400BDF4FF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6541B4E217CA25500BDF4FF /* PostcodeSearch */,
+				B6541B4E217CA25500BDF4FF /* UserInfoInput */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B6541B4E217CA25500BDF4FF /* PostcodeSearch */ = {
+		B6541B4E217CA25500BDF4FF /* UserInfoInput */ = {
 			isa = PBXGroup;
 			children = (
-				B693E654216E8032001BE87A /* PostcodeSearchViewController.swift */,
-				B693E656216E8032001BE87A /* PostcodeSearchViewController.storyboard */,
+				B63826182182382000E7A19A /* Extension */,
+				B693E654216E8032001BE87A /* UserInfoInputViewController.swift */,
+				B693E656216E8032001BE87A /* UserInfoInputViewController.storyboard */,
 			);
-			path = PostcodeSearch;
+			path = UserInfoInput;
 			sourceTree = "<group>";
 		};
 		B6541B4F217CA27800BDF4FF /* Others */ = {
@@ -152,7 +189,7 @@
 		B6541B50217CA52C00BDF4FF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B6541B51217CA55200BDF4FF /* PostcodeSearchUITests.swift */,
+				B6541B51217CA55200BDF4FF /* UserInfoInputViewControllerUITests.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,7 +248,6 @@
 		B693E671216E8034001BE87A /* iOSDISampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B6541B53217CA70300BDF4FF /* UIComponentIdentifiers.swift */,
 				B6541B50217CA52C00BDF4FF /* Screens */,
 				B693E674216E8034001BE87A /* Info.plist */,
 			);
@@ -282,6 +318,7 @@
 		B6E5B971217C641200B1DAB3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B6382615217F864200E7A19A /* UIKit */,
 				B6541B59217CAB6D00BDF4FF /* Foundation */,
 			);
 			path = Extensions;
@@ -395,7 +432,7 @@
 				B693E65D216E8033001BE87A /* LaunchScreen.storyboard in Resources */,
 				B6541B58217CAAF900BDF4FF /* Localizable.strings in Resources */,
 				B693E65A216E8033001BE87A /* Assets.xcassets in Resources */,
-				B693E658216E8032001BE87A /* PostcodeSearchViewController.storyboard in Resources */,
+				B693E658216E8032001BE87A /* UserInfoInputViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,16 +480,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E764DC218585E800DF78DD /* KeyboardEventObservable.swift in Sources */,
 				B693E684216E85F6001BE87A /* Injectable.swift in Sources */,
+				B6E764D621856A9300DF78DD /* UIScrollView+Touch.swift in Sources */,
 				B6E5B970217C636D00B1DAB3 /* PostcodeRequest.swift in Sources */,
+				B6E764D4218568C600DF78DD /* UIView+RecursiveSubviews.swift in Sources */,
 				B6E5B973217C642500B1DAB3 /* Error+Helper.swift in Sources */,
-				B693E655216E8032001BE87A /* PostcodeSearchViewController.swift in Sources */,
+				B638261C218381CD00E7A19A /* UITextField+DoneToolbar.swift in Sources */,
+				B693E655216E8032001BE87A /* UserInfoInputViewController.swift in Sources */,
+				B6E764DE2185934100DF78DD /* UIViewController+ShowAlert.swift in Sources */,
 				B6541B5B217CAB7D00BDF4FF /* String+Localized.swift in Sources */,
 				B6E5B969217C4B7100B1DAB3 /* APIRequest.swift in Sources */,
 				B6E5B975217C64AA00B1DAB3 /* Postcodes.swift in Sources */,
 				B693E653216E8032001BE87A /* AppDelegate.swift in Sources */,
+				B6E764D821856BAB00DF78DD /* UIViewController+EndEditing.swift in Sources */,
 				B6E5B96B217C4E4300B1DAB3 /* APIClient.swift in Sources */,
+				B6E764DA21856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift in Sources */,
 				B6541B56217CAA0A00BDF4FF /* Constants.swift in Sources */,
+				B638261A2182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,8 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6541B52217CA55200BDF4FF /* PostcodeSearchUITests.swift in Sources */,
-				B6541B54217CA70300BDF4FF /* UIComponentIdentifiers.swift in Sources */,
+				B6541B52217CA55200BDF4FF /* UserInfoInputViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,12 +533,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B693E656216E8032001BE87A /* PostcodeSearchViewController.storyboard */ = {
+		B693E656216E8032001BE87A /* UserInfoInputViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B693E657216E8032001BE87A /* Base */,
 			);
-			name = PostcodeSearchViewController.storyboard;
+			name = UserInfoInputViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		B693E65B216E8033001BE87A /* LaunchScreen.storyboard */ = {

@@ -11,6 +11,8 @@
 "success" = "成功";
 "failure" = "失敗";
 
+"postcode_is_empty" = "郵便番号が入力されていません。\n郵便番号を入力してください。";
+
 "postcode_search_error_empty" = "該当の住所が見つかりませんでした。";
 "postcode_search_error_searchFailed" = "住所の検索に失敗しました。";
 "postcode_search_error_unreachable" = "通信環境の良い場所で再度お試しください。";
