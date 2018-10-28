@@ -8,7 +8,12 @@
 
 import Foundation
 
-protocol Injectable {
+protocol InitializerInjectable {
     associatedtype Dependency
     init(dependency: Dependency)
+}
+
+protocol MethodInjectable {
+    associatedtype Dependency
+    func inject(dependency: Dependency)
 }

@@ -35,7 +35,7 @@ enum PostcodeSearchError: Error {
 }
 
 /// 郵便番号APIリクエスト
-struct PostcodeRequest: APIRequest, Injectable {
+struct PostcodeRequest: APIRequest, InitializerInjectable {
     
     struct Dependency {
         let baseURL: String
@@ -44,11 +44,11 @@ struct PostcodeRequest: APIRequest, Injectable {
     }
     
     /// baseURL, path, parametersをイニシャライザで注入する
-    init(dependency: Dependency) {
+    init(dependency: PostcodeRequest.Dependency) {
         self.dependency = dependency
     }
     
-    private let dependency: Dependency
+    private let dependency: PostcodeRequest.Dependency
     
     typealias ResponseComponent = Postcode
     typealias Response = Postcodes

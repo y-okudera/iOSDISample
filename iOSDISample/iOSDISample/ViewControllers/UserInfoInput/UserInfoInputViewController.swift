@@ -110,6 +110,42 @@ final class UserInfoInputViewController: UIViewController {
         // TextField, TextViewの編集を終了する
         endEditingOfAllFields()
         endEditingOfAllTextViews()
+
+        let name = nameField.text ?? ""
+        let phonetic = phoneticField.text ?? ""
+        let tel = telField.text ?? ""
+        let address = addressTextView.text ?? ""
+
+        if name.isEmpty {
+            showAlert(title: "error".localized(), message: "name_is_empty".localized())
+            return
+        }
+
+        if phonetic.isEmpty {
+            showAlert(title: "error".localized(), message: "phonetic_is_empty".localized())
+            return
+        }
+
+        if tel.isEmpty {
+            showAlert(title: "error".localized(), message: "tel_is_empty".localized())
+            return
+        }
+
+        if address.isEmpty {
+            showAlert(title: "error".localized(), message: "address_is_empty".localized())
+            return
+        }
+
+        let userInfoConfirmVCDependency = UserInfoConfirmViewController.Dependency(
+            userName: name,
+            phonetic: phonetic,
+            tel: tel,
+            address: address
+        )
+
+        let vc = UserInfoConfirmViewController.make(dependency: userInfoConfirmVCDependency)
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

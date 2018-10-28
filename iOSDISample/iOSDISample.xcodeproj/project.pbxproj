@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6249C092185DC9B00B6AFF1 /* UserInfoConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C082185DC9B00B6AFF1 /* UserInfoConfirmViewController.swift */; };
+		B6249C0B2185DCA300B6AFF1 /* UserInfoConfirmViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6249C0A2185DCA300B6AFF1 /* UserInfoConfirmViewController.storyboard */; };
+		B6249C0D2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C0C2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift */; };
+		B6249C0F2185E03B00B6AFF1 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C0E2185E03B00B6AFF1 /* NSObject+ClassName.swift */; };
+		B6249C132185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */; };
 		B638261A2182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */; };
 		B638261C218381CD00E7A19A /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */; };
 		B6541B4A217C855400BDF4FF /* PostcodeRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */; };
@@ -55,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6249C082185DC9B00B6AFF1 /* UserInfoConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoConfirmViewController.swift; sourceTree = "<group>"; };
+		B6249C0A2185DCA300B6AFF1 /* UserInfoConfirmViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfoConfirmViewController.storyboard; sourceTree = "<group>"; };
+		B6249C0C2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+InstantiateViewController.swift"; sourceTree = "<group>"; };
+		B6249C0E2185E03B00B6AFF1 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoConfirmViewControllerTests.swift; sourceTree = "<group>"; };
 		B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoInputViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
 		B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeRequestTests.swift; sourceTree = "<group>"; };
@@ -118,6 +128,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6249C072185DC5F00B6AFF1 /* UserInfoConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				B6249C082185DC9B00B6AFF1 /* UserInfoConfirmViewController.swift */,
+				B6249C0A2185DCA300B6AFF1 /* UserInfoConfirmViewController.storyboard */,
+			);
+			path = UserInfoConfirm;
+			sourceTree = "<group>";
+		};
+		B6249C102185E42600B6AFF1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6249C112185E43A00B6AFF1 /* UserInfoConfirm */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6249C112185E43A00B6AFF1 /* UserInfoConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */,
+			);
+			path = UserInfoConfirm;
+			sourceTree = "<group>";
+		};
 		B6382615217F864200E7A19A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +162,7 @@
 				B6E764D3218568C600DF78DD /* UIView+RecursiveSubviews.swift */,
 				B6E764D721856BAB00DF78DD /* UIViewController+EndEditing.swift */,
 				B6E764DD2185934100DF78DD /* UIViewController+ShowAlert.swift */,
+				B6249C0C2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -159,6 +195,7 @@
 		B6541B4D217CA24400BDF4FF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6249C072185DC5F00B6AFF1 /* UserInfoConfirm */,
 				B6541B4E217CA25500BDF4FF /* UserInfoInput */,
 			);
 			path = ViewControllers;
@@ -199,6 +236,7 @@
 			children = (
 				B6E5B972217C642500B1DAB3 /* Error+Helper.swift */,
 				B6541B5A217CAB7D00BDF4FF /* String+Localized.swift */,
+				B6249C0E2185E03B00B6AFF1 /* NSObject+ClassName.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -239,6 +277,7 @@
 		B693E666216E8034001BE87A /* iOSDISampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6249C102185E42600B6AFF1 /* ViewControllers */,
 				B6541B47217C853800BDF4FF /* Models */,
 				B693E669216E8034001BE87A /* Info.plist */,
 			);
@@ -433,6 +472,7 @@
 				B6541B58217CAAF900BDF4FF /* Localizable.strings in Resources */,
 				B693E65A216E8033001BE87A /* Assets.xcassets in Resources */,
 				B693E658216E8032001BE87A /* UserInfoInputViewController.storyboard in Resources */,
+				B6249C0B2185DCA300B6AFF1 /* UserInfoConfirmViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,13 +528,16 @@
 				B6E5B973217C642500B1DAB3 /* Error+Helper.swift in Sources */,
 				B638261C218381CD00E7A19A /* UITextField+DoneToolbar.swift in Sources */,
 				B693E655216E8032001BE87A /* UserInfoInputViewController.swift in Sources */,
+				B6249C0D2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift in Sources */,
 				B6E764DE2185934100DF78DD /* UIViewController+ShowAlert.swift in Sources */,
 				B6541B5B217CAB7D00BDF4FF /* String+Localized.swift in Sources */,
 				B6E5B969217C4B7100B1DAB3 /* APIRequest.swift in Sources */,
 				B6E5B975217C64AA00B1DAB3 /* Postcodes.swift in Sources */,
+				B6249C0F2185E03B00B6AFF1 /* NSObject+ClassName.swift in Sources */,
 				B693E653216E8032001BE87A /* AppDelegate.swift in Sources */,
 				B6E764D821856BAB00DF78DD /* UIViewController+EndEditing.swift in Sources */,
 				B6E5B96B217C4E4300B1DAB3 /* APIClient.swift in Sources */,
+				B6249C092185DC9B00B6AFF1 /* UserInfoConfirmViewController.swift in Sources */,
 				B6E764DA21856EBE00DF78DD /* UserInfoInputViewController+UITextViewDelegate.swift in Sources */,
 				B6541B56217CAA0A00BDF4FF /* Constants.swift in Sources */,
 				B638261A2182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift in Sources */,
@@ -505,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6249C132185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift in Sources */,
 				B6541B4A217C855400BDF4FF /* PostcodeRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
