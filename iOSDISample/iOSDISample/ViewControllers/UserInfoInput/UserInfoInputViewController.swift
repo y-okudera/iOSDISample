@@ -62,11 +62,9 @@ final class UserInfoInputViewController: UIViewController {
 
     /// 郵便番号で住所を検索ボタンタップ時のイベント
     @IBAction func didTapPostcodeRequest(_ sender: UIButton) {
-
         print("郵便番号で住所を検索ボタンタップ")
 
         let postcode = postcodeField.text ?? ""
-
         if postcode.isEmpty {
             self.showAlert(title: "failure".localized(), message: "postcode_is_empty".localized())
             return
@@ -81,7 +79,6 @@ final class UserInfoInputViewController: UIViewController {
             path: Constants.PostcodeAPI.pathPostcode,
             parameters: PostcodeRequest.buildParams(postcode: postcode, general: true, office: true)
         )
-        
         let postcodeRequest = PostcodeRequest(dependency: postcodeRequestDependency)
 
         startAnimating()
@@ -90,19 +87,19 @@ final class UserInfoInputViewController: UIViewController {
 
                 let address = postcodes.data.first?.allAddress ?? ""
                 self.addressTextView.text = address
-
             }
             .catch { error in
                 
                 if let postcodeSearchError = error as? PostcodeSearchError {
                     self.showAlert(title: "failure".localized(), message: postcodeSearchError.message)
                 } else {
+                    print("error object is not contain to PostcodeSearchError type.")
                     let postcodeSearchError = PostcodeSearchError.others
                     self.showAlert(title: "failure".localized(), message: postcodeSearchError.message)
                 }
-
             }
             .finally {
+
                 self.stopAnimating()
                 print("APIRequest処理完了")
         }
@@ -110,7 +107,6 @@ final class UserInfoInputViewController: UIViewController {
 
     /// 次へボタンタップ時のイベント
     @IBAction func didTapNext(_ sender: UIButton) {
-
         print("次へボタンタップ")
 
         // TextField, TextViewの編集を終了する
@@ -121,24 +117,11 @@ final class UserInfoInputViewController: UIViewController {
         let phonetic = phoneticField.text ?? ""
         let tel = telField.text ?? ""
         let address = addressTextView.text ?? ""
-
-        if name.isEmpty {
-            showAlert(title: "error".localized(), message: "name_is_empty".localized())
-            return
-        }
-
-        if phonetic.isEmpty {
-            showAlert(title: "error".localized(), message: "phonetic_is_empty".localized())
-            return
-        }
-
-        if tel.isEmpty {
-            showAlert(title: "error".localized(), message: "tel_is_empty".localized())
-            return
-        }
-
-        if address.isEmpty {
-            showAlert(title: "error".localized(), message: "address_is_empty".localized())
+        if let validationError = UserInfoValidator.validate(name: name,
+                                                            phonetic: phonetic,
+                                                            tel: tel,
+                                                            address: address) {
+            showAlert(title: "error".localized(), message: validationError.message)
             return
         }
 
@@ -150,7 +133,6 @@ final class UserInfoInputViewController: UIViewController {
         )
 
         let vc = UserInfoConfirmViewController.make(dependency: userInfoConfirmVCDependency)
-
         navigationController?.pushViewController(vc, animated: true)
     }
 }

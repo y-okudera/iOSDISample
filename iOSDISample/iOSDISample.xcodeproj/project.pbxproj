@@ -14,6 +14,7 @@
 		B6249C132185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */; };
 		B6249C162185F17F00B6AFF1 /* NVActivityIndicatorViewAppExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6249C142185F17F00B6AFF1 /* NVActivityIndicatorViewAppExtension.framework */; };
 		B6249C172185F17F00B6AFF1 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6249C152185F17F00B6AFF1 /* NVActivityIndicatorView.framework */; };
+		B6249C1A21860D9700B6AFF1 /* UserInfoValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6249C1921860D9700B6AFF1 /* UserInfoValidator.swift */; };
 		B638261A2182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */; };
 		B638261C218381CD00E7A19A /* UITextField+DoneToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */; };
 		B6541B4A217C855400BDF4FF /* PostcodeRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */; };
@@ -69,6 +70,7 @@
 		B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoConfirmViewControllerTests.swift; sourceTree = "<group>"; };
 		B6249C142185F17F00B6AFF1 /* NVActivityIndicatorViewAppExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorViewAppExtension.framework; path = Carthage/Build/iOS/NVActivityIndicatorViewAppExtension.framework; sourceTree = "<group>"; };
 		B6249C152185F17F00B6AFF1 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		B6249C1921860D9700B6AFF1 /* UserInfoValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoValidator.swift; sourceTree = "<group>"; };
 		B63826192182383E00E7A19A /* UserInfoInputViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfoInputViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		B638261B218381CD00E7A19A /* UITextField+DoneToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DoneToolbar.swift"; sourceTree = "<group>"; };
 		B6541B49217C855400BDF4FF /* PostcodeRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeRequestTests.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 				B6249C122185E44600B6AFF1 /* UserInfoConfirmViewControllerTests.swift */,
 			);
 			path = UserInfoConfirm;
+			sourceTree = "<group>";
+		};
+		B6249C1821860D7000B6AFF1 /* UserInfoInput */ = {
+			isa = PBXGroup;
+			children = (
+				B6249C1921860D9700B6AFF1 /* UserInfoValidator.swift */,
+			);
+			path = UserInfoInput;
 			sourceTree = "<group>";
 		};
 		B6382615217F864200E7A19A /* UIKit */ = {
@@ -342,6 +352,7 @@
 			children = (
 				B6E5B96D217C635700B1DAB3 /* APIRequest */,
 				B6E5B96E217C635D00B1DAB3 /* APIResponse */,
+				B6249C1821860D7000B6AFF1 /* UserInfoInput */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -541,6 +552,7 @@
 				B6249C0D2185DF8B00B6AFF1 /* UIStoryboard+InstantiateViewController.swift in Sources */,
 				B6E764DE2185934100DF78DD /* UIViewController+ShowAlert.swift in Sources */,
 				B6541B5B217CAB7D00BDF4FF /* String+Localized.swift in Sources */,
+				B6249C1A21860D9700B6AFF1 /* UserInfoValidator.swift in Sources */,
 				B6E5B969217C4B7100B1DAB3 /* APIRequest.swift in Sources */,
 				B6E5B975217C64AA00B1DAB3 /* Postcodes.swift in Sources */,
 				B6249C0F2185E03B00B6AFF1 /* NSObject+ClassName.swift in Sources */,
