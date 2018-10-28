@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import NVActivityIndicatorView
 import PromiseKit
 
 final class UserInfoInputViewController: UIViewController {
@@ -82,13 +83,16 @@ final class UserInfoInputViewController: UIViewController {
         )
         
         let postcodeRequest = PostcodeRequest(dependency: postcodeRequestDependency)
-        
-        postcodeRequest.sendAPIRequest().get{ postcodes in
 
-            let address = postcodes.data.first?.allAddress ?? ""
-            self.addressTextView.text = address
-            
-            }.catch{ error in
+        startAnimating()
+        postcodeRequest.sendAPIRequest()
+            .get { postcodes in
+
+                let address = postcodes.data.first?.allAddress ?? ""
+                self.addressTextView.text = address
+
+            }
+            .catch { error in
                 
                 if let postcodeSearchError = error as? PostcodeSearchError {
                     self.showAlert(title: "failure".localized(), message: postcodeSearchError.message)
@@ -97,7 +101,9 @@ final class UserInfoInputViewController: UIViewController {
                     self.showAlert(title: "failure".localized(), message: postcodeSearchError.message)
                 }
 
-            }.finally {
+            }
+            .finally {
+                self.stopAnimating()
                 print("APIRequest処理完了")
         }
     }
@@ -160,3 +166,6 @@ extension UserInfoInputViewController: KeyboardEventObservable {
         keyboardHideAction(notification)
     }
 }
+
+// MARK: - NVActivityIndicatorViewable
+extension UserInfoInputViewController: NVActivityIndicatorViewable {}
