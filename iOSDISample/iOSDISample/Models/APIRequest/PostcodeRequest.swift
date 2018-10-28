@@ -32,6 +32,43 @@ enum PostcodeSearchError: Error {
             return "postcode_search_error_others".localized()
         }
     }
+
+    init(apiError: APIError) {
+
+        switch apiError {
+
+        case APIError.connectionError(let error, let statusCode):
+
+            if error.isOffline {
+                print("isOffline")
+                self = .unreachable
+                return
+            }
+
+            if error.isTimeout {
+                print("isTimeout")
+                self = .unreachable
+                return
+            }
+
+            // HTTPステータスコードが500台の場合はサーバエラーを返す
+            if 500 ..< 600 ~= statusCode {
+                print("serverError")
+                self = .serverError
+                return
+            }
+
+            self = .searchFailed
+
+        case APIError.invalidResponse:
+            print("invalidResponse")
+            self = .searchFailed
+
+        case APIError.parseError:
+            print("parseError")
+            self = .searchFailed
+        }
+    }
 }
 
 /// 郵便番号APIリクエスト
@@ -80,38 +117,7 @@ struct PostcodeRequest: APIRequest, InitializerInjectable {
     }
     
     func sendAPIRequest() -> Promise<Response> {
-        
-        func determineAPIErrorType(apiError: APIError) -> PostcodeSearchError {
-            
-            switch apiError {
-            case .connectionError(let error, let statusCode):
 
-                if error.isOffline {
-                    print("isOffline")
-                    return PostcodeSearchError.unreachable
-                }
-
-                if error.isTimeout {
-                    print("isTimeout")
-                    return PostcodeSearchError.unreachable
-                }
-
-                // HTTPステータスコードが500台の場合はサーバエラーを返す
-                if 500 ..< 600 ~= statusCode {
-                    print("serverError")
-                    return PostcodeSearchError.serverError
-                }
-                
-                return PostcodeSearchError.searchFailed
-                
-            case .invalidResponse:
-                return PostcodeSearchError.searchFailed
-                
-            case .parseError:
-                return PostcodeSearchError.searchFailed
-            }
-        }
-        
         return Promise<Response> { resolver in
             
             APIClient.request(request: self)
@@ -127,16 +133,13 @@ struct PostcodeRequest: APIRequest, InitializerInjectable {
                     resolver.fulfill(postcodes)
                 }
                 .catch { error in
-                    
-                    // APIErrorにキャストできない場合は、PostcodeSearchError.othersをセット
-                    guard let apiError = error as? APIError else {
+
+                    if let apiError = error as? APIError {
+                        resolver.reject(PostcodeSearchError(apiError: apiError))
+                    } else {
+                        print("error object is not contain to APIError type.")
                         resolver.reject(PostcodeSearchError.others)
-                        return
                     }
-                    
-                    // APIErrorをPostcodeSearchErrorに変換
-                    let postcodeSearchError = determineAPIErrorType(apiError: apiError)
-                    resolver.reject(postcodeSearchError)
             }
         }
     }
